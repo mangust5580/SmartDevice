@@ -1,0 +1,249 @@
+.banner {
+  position: relative;
+  z-index: 1;
+  margin-top: -116px;
+  padding: 91px 55px 0 46px;
+  min-height: 786px;
+  background-color: $green-blue;
+  background-image: url(../img/banner-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::before {
+    position: absolute;
+    top: 31%;
+    right: 13.5%;
+    z-index: -2;
+    width: 31.82%;
+    height: 487px;
+    background-image: url(../img/triangles.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    top: 29.4%;
+    right: 9.2%;
+    z-index: -1;
+    width: 36.72%;
+    height: 515px;
+    background-image: url(../img/banner-img.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  @media (max-width: 1024px) {
+    min-height: 766px;
+  }
+
+  @media (max-width: $tablet-width) {
+    overflow: hidden;
+    padding: 91px 88px 0 88px;
+    min-height: 624px;
+
+    &::before {
+      top: 13%;
+      right: -22%;
+      width: 480px;
+      height: 386px;
+    }
+
+    &::after {
+      top: 16.6%;
+      right: 0;
+      width: 260px;
+      height: 340px;
+      background-image: url(../img/banner-img-tb.png);
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 210px 15px 0 15px;
+    min-height: 486px;
+
+    &::before {
+      top: 17%;
+      right: -109.6%;
+      width: 505px;
+      height: 368px;
+    }
+
+    &::after {
+      top: 19.9%;
+      width: 294px;
+      height: 220px;
+      background-image: url(../img/banner-img-mb.png);
+    }
+  }
+}
+
+.banner__wrapper {
+  margin: 224px auto 0 auto;
+  max-width: 1410px;
+
+  @media (max-width: 1024px) {
+    margin: 160px auto 0 auto;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 124px auto 0 auto;
+  }
+
+  @media (max-width: 480px) {
+    position: relative;
+  }
+}
+
+.banner__title {
+  margin: 0;
+  padding: 0;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 700;
+  font-size: 80px;
+  font-family: $RobotoCondensed;
+  line-height: 94px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 420px;
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 420px;
+    font-size: 40px;
+    line-height: 47px;
+  }
+}
+
+.banner__text {
+  position: relative;
+  padding: 5px 0 0 calc(66px + 30px);
+  max-width: 620px;
+  color: $white;
+  text-transform: lowercase;
+  font-weight: 400;
+  font-size: 22px;
+  font-family: $PTmono;
+  line-height: 34px;
+
+  &::before {
+    position: absolute;
+    top: 30%;
+    left: 2px;
+    width: 66px;
+    height: 2px;
+    background-color: $white;
+    content: "";
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 12px 0 0 calc(33px + 18px);
+    max-width: 420px;
+    font-size: 18px;
+    line-height: 28px;
+
+    &::before {
+      top: 42%;
+      width: 33px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+    line-height: 25px;
+
+    &::before {
+      top: 30%;
+    }
+  }
+}
+
+.banner__link {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 22px 0 0 95px;
+  padding: 18px 30px;
+  min-width: 407px;
+  border-radius: 5px;
+  background-color: $frosty-sky;
+  color: $white;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: $RobotoCondensed;
+  line-height: 19px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $white;
+    color: $frosty-sky;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &--desc-tb {
+    display: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 36px 0 0 50px;
+    padding: 18px 5.4%;
+    min-width: auto;
+  }
+
+  @media (max-width: 480px) {
+    position: absolute;
+    margin: 24px auto 0 auto;
+    min-width: 288px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &--desc-tb {
+      display: inline-block;
+    }
+
+    &--mb {
+      display: none;
+    }
+  }
+}
+
+.banner__scroll {
+  position: absolute;
+  bottom: 14.4%;
+  left: 11.2%;
+  display: inline-block;
+  color: $white;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: $PTmono;
+  line-height: 16px;
+  opacity: 0.5;
+  transform: rotate(-90deg);
+
+  &:hover {
+    color: $frosty-sky;
+  }
+
+  &:active {
+    color: $white;
+    opacity: 0.4;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}

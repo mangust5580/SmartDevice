@@ -1,0 +1,130 @@
+.about-company {
+  position: relative;
+  padding: 0 55px;
+  max-width: 51.3%;
+  margin: 0 auto;
+  padding: 96px 0 0 174px;
+
+  &::before {
+    position: absolute;
+    top: 25%;
+    left: -3%;
+    width: 220px;
+    height: 317px;
+    background-image: url(../img/about-company-year.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 68%;
+    padding: 36px 0 0 176px;
+
+    &::before {
+      top: 9%;
+      left: -5%;
+      width: 244px;
+      height: 362px;
+      background-image: url(../img/about-company-year-tb.png);
+    }
+  }
+
+  @media (max-width: 480px) {
+    max-width: 100%;
+    margin: 54px 0 0 0;
+    padding: 0 25px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-company::before {
+    display: none;
+  }
+}
+
+.about-company__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 36px;
+  font-family: $RobotoCondensed;
+  line-height: 51px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.about-company__text {
+  margin: 20px 0 0 0;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: $PTmono;
+  line-height: 22px;
+
+  @media (max-width: $tablet-width) {
+    margin: 24px 0 0 0;
+
+    & span {
+      display: none;
+    }
+
+    @media (max-width: $mobile-width) {
+      &:nth-child(3) {
+        padding: 13px 0 0 0;
+      }
+    }
+  }
+}
+
+.about-company__link {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 40px 0 0 0;
+  padding: 15px 5.1% 12px 5.1%;
+  border: 1px solid $frosty-sky;
+  border-radius: 5px;
+  color: $frosty-sky;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: $RobotoCondensed;
+  line-height: 16px;
+
+  &:hover {
+    background-color: $frosty-sky;
+    color: $white;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 36px 0 0 0;
+    padding: 15px 9.6% 12px 9.6%;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 28px 0 0 0;
+    padding: 15px 17.4% 12px 17.4%;
+  }
+}

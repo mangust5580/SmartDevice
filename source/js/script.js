@@ -1,81 +1,65 @@
-var $contactsBtn = document.querySelector(".page-header__contacts-btn");
-var $modal = document.querySelector(".modal");
-var $modalCloseBtn = document.querySelector(".modal__header-btn-close");
-var $navTitle = document.querySelector(".page-footer__nav-title");
-var $navList = document.querySelector(".page-footer__nav-list");
-var $aboutOfficeTitle = document.querySelector(".page-footer__about-office-title");
-var $aboutOfficeList = document.querySelector(".page-footer__about-office-list");
-var $modalName = document.querySelector(".modal__value--name");
-var $modalTel = document.querySelector(".modal__value--tel");
-var $modalQuestion = document.querySelector(".modal__question");
-var $phoneMask = document.querySelector("#phone-mask");
-var $modalPhoneMask = document.querySelector("#modal-phone-mask");
-var $modalOverlay = document.querySelector(".modal__overlay");
-var $modalOverlayShow = document.querySelector(".modal__overlay-show");
+const $contactsBtn = document.querySelector(".page-header__contacts-btn");
+const $modal = document.querySelector(".modal");
+const $modalCloseBtn = document.querySelector(".modal__header-btn-close");
+const $modalName = document.querySelector(".modal__value--name");
+const $modalTel = document.querySelector(".modal__value--tel");
+const $modalQuestion = document.querySelector(".modal__question");
+const $phoneMask = document.querySelector("#phone-mask");
+const $modalPhoneMask = document.querySelector("#modal-phone-mask");
+const $modalOverlay = document.querySelector(".modal__overlay");
 
-var storageName = localStorage.getItem("name");
-var storageTel = localStorage.getItem("tel");
-var storageQuestion = localStorage.getItem("question ");
+const storageName = localStorage.getItem("name");
+const storageTel = localStorage.getItem("tel");
+const storageQuestion = localStorage.getItem("question ");
 
-$contactsBtn.addEventListener("click", function (evt) {
-  evt.preventDefault();
+const modalShowFunction = (event) => {
+  event.preventDefault();
   $modal.classList.toggle("modal-show");
   $modalOverlay.classList.toggle("modal__overlay-show");
   $modalName.focus();
   if (storageName) {
     $modalName.value = storageName;
   }
-  if (storageTel) {
+  else if (storageTel) {
     $modalTel.value = storageTel;
   }
-  if (storageQuestion) {
+  else if (storageQuestion) {
     $modalQuestion.value = storageQuestion;
   }
-});
+}
 
-$modalCloseBtn.addEventListener("click", function () {
+const modalCloseFunction = () => {
   $modal.classList.contains("modal-show");
   $modal.classList.remove("modal-show");
   $modalOverlay.classList.remove("modal__overlay-show");
-});
+}
 
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
+const modalCloseEscFunction = (event) => {
+  if (event.keyCode === 27) {
     if ($modal.classList.contains("modal-show")) {
-      evt.preventDefault();
+      event.preventDefault();
       $modal.classList.remove("modal-show");
       $modalOverlay.classList.remove("modal__overlay-show");
     }
   }
-});
+}
 
-if (document.body.clientWidth <= 480) {
-  $navTitle.addEventListener("click", function () {
-    $navTitle.classList.toggle("page-footer__nav-title--close");
-    $aboutOfficeTitle.classList.toggle("page-footer__about-office-title--close");
-    $navList.classList.toggle("page-footer__nav-list--open");
-    $aboutOfficeList.classList.toggle("page-footer__about-office-list--close");
-  });
-
-  $aboutOfficeTitle.addEventListener("click", function () {
-    $aboutOfficeTitle.classList.toggle("page-footer__about-office-title--close");
-    $navTitle.classList.toggle("page-footer__nav-title--close");
-    $aboutOfficeList.classList.toggle("page-footer__about-office-list--close");
-    $navList.classList.toggle("page-footer__nav-list--open");
-  });
-};
-
-$modalOverlay.addEventListener("click", function () {
+const modalRemoveFunction = () => {
   $modal.classList.remove("modal-show");
   $modalOverlay.classList.remove("modal__overlay-show");
-});
+}
 
-var phoneMask = IMask(
+$contactsBtn.addEventListener("click", modalShowFunction);
+$modalCloseBtn.addEventListener("click", modalCloseFunction);
+window.addEventListener("keydown", modalCloseEscFunction);
+$modalOverlay.addEventListener("click", modalRemoveFunction);
+
+const phoneMask = IMask(
   $phoneMask, {
     mask: "+{7}(000)000-00-00"
   });
 
-var phoneMask = IMask(
+const modalPhoneMask = IMask(
   $modalPhoneMask, {
     mask: "+{7}(000)000-00-00"
   });

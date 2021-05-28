@@ -1,5 +1,9 @@
-@import "variables.scss";
-@import "scaffolding.scss";
+//Глобальные
+@import "global/variables.scss";
+@import "global/global.scss";
+@import "global/fonts.scss";
+
+//Блоки
 @import "blocks/page-header.scss";
 @import "blocks/banner.scss";
 @import "blocks/advantages.scss";
@@ -8,3 +12,4 @@
 @import "blocks/consultation.scss";
 @import "blocks/modal.scss";
 @import "blocks/page-footer.scss";
+

@@ -1,0 +1,39 @@
+.extra-menu__list {
+  margin: 0;
+  padding: 0;
+
+  @include sm {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+}
+
+.extra-menu__item {
+  display: block;
+  float: left;
+  width: 49%;
+
+  @include md {
+    width: 100%;
+    float: none;
+  }
+
+  @include sm {
+    margin-top: 10px;
+  }
+}
+
+.extra-menu__link {
+  font-size: 15px;
+  line-height: 25px;
+  color: $gable-green;
+  opacity: 0.5;
+
+  &:hover {
+    color: $dodger-blue;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+}

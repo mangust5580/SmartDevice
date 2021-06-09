@@ -1,0 +1,253 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $gable-green;
+
+  @include lg {
+    height: auto;
+    min-height: 750px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url(../img/desktop/hero-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include md {
+      background-image: url(../img/tablet/hero-bg-tb.png);
+    }
+
+    @include mb {
+      background-image: url(../img/mobile/hero-bg-tb.png);
+    }
+  }
+}
+
+.hero .container {
+  position: relative;
+  padding-top: 15%;
+  height: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 28%;
+    z-index: 200;
+    width: 564px;
+    height: 412px;
+    background-image: url(../img/desktop/printed-circuit-boards.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include xl {
+      right: -20%;
+      top: 40%;
+    }
+
+    @include lg {
+      right: -30%;
+      top: 28%;
+    }
+
+    @include md {
+      left: 50%;
+      top: 20%;
+      width: 372px;
+      height: 272px;
+      background-image: url(../img/tablet/printed-circuit-boards-tb.png);
+      transform: translateX(-50%);
+    }
+
+    @include mb {
+      width: 300px;
+      height: 220px;
+      background-image: url(../img/mobile/printed-circuit-boards-mb.png);
+    }
+  }
+}
+
+.hero__text-wrapper {
+  @include xl {
+    margin-top: 80px;
+  }
+
+  @include md {
+    margin-top: 340px;
+  }
+
+  @include sm {
+    margin-top: 370px;
+  }
+
+  @include mb {
+    margin-top: 360px;
+  }
+}
+
+.hero__title {
+  margin: 10px 0;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 86px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: $white;
+
+  @include xl {
+    font-size: 62px;
+    line-height: 76px;
+  }
+
+  @include lg {
+    max-width: 340px;
+  }
+
+  @include md {
+    min-width: 90%;
+    font-size: 52px;
+    line-height: 66px;
+  }
+}
+
+.hero__descr {
+  position: relative;
+  margin-top: 30px;
+  padding-left: calc(66px + 30px);
+  max-width: 620px;
+  font-family: $PTmono;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  color: $white;
+
+  @include xl {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @include lg {
+    padding-left: calc(50px + 30px);
+    max-width: 450px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @include md {
+    padding-left: calc(40px + 30px);
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @include mb {
+    padding-left: calc(30px + 20px);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 30%;
+    width: 66px;
+    height: 2px;
+    background-color: $white;
+
+    @include lg {
+      width: 50px;
+    }
+
+    @include md {
+      width: 40px;
+    }
+
+    @include mb {
+      width: 30px;
+    }
+  }
+}
+
+.hero__link {
+  margin-top: 54px;
+  padding: 18px 30px;
+  font-size: 16px;
+  line-height: 19px;
+  color: $white;
+  background-color: $dodger-blue;
+  transition: background-color 0.3s;
+
+  &:hover {
+    color: $dodger-blue;
+    background-color: $white;
+    transition: background-color 0.3s;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @include lg {
+    margin-top: 34px;
+  }
+
+  @include mb {
+    padding: 16px 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &--detail {
+    @include md {
+      display: none;
+    }
+  }
+
+  &--briefly {
+    display: none;
+
+    @include md {
+      display: block;
+    }
+  }
+}
+
+.hero__scroll {
+  position: absolute;
+  left: 0;
+  bottom: 12%;
+  display: inline-block;
+  font-family: $PTmono;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  color: $white;
+  opacity: 0.5;
+  transform: rotate(-90deg);
+  transition: color 0.3s;
+
+  &:hover {
+    color: $dodger-blue;
+    transition: color 0.3s;
+  }
+
+  &:active {
+    color: $white;
+    opacity: 0.5;
+  }
+
+  @include lg {
+    display: none;
+  }
+}

@@ -1,0 +1,27 @@
+<section class="callback">
+  <div class="container">
+    <h2 class="callback__title visually-hidden">Форма для вопросов</h2>
+    <form action="#" class="callback__form callback-form" method="POST">
+      <header class="callback-form__header">
+        <h2 class="callback-form__title">Остались вопросы? Задайте их нам!</h2>
+        <p class="callback-form__descr">Мы проконсультируем Вас бесплатно</p>
+      </header>
+      <div class="callback-form__main">
+        <div class="callback-form__block">
+          <input class="callback-form__field" type="text" name="user-name" placeholder="Имя" aria-label="Имя" required>
+          <input class="callback-form__field" type="tel" name="tel-number" placeholder="Телефон"
+                 aria-label="Номер телефона" required>
+        </div>
+        <div class="callback-form__block">
+          <textarea class="callback-form__question" name="request" aria-label="Задать вопрос" placeholder="Ваш вопрос"
+                    required></textarea>
+        </div>
+      </div>
+      <footer class="callback-form__footer">
+        <button class="callback-form__btn btn-reset btn" type="submit">Задать вопрос</button>
+        @include('../partials/privacy.html')
+      </footer>
+    </form>
+  </div>
+</section>
+

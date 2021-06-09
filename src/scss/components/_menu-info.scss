@@ -1,0 +1,36 @@
+.menu-info {
+  display: flex;
+  justify-content: space-between;
+
+  @include sm {
+    display: block;
+  }
+}
+
+.menu-info__title {
+  align-items: center;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $gable-green;
+
+  @include sm {
+    display: none;
+  }
+}
+
+.menu-info__block {
+  @include sm {
+    &:not(:first-child) {
+      border-top: 1px solid $transparent-corduroy;
+    }
+  }
+}
+
+.menu-info__block--hidden .menu-info__list {
+  @include sm {
+    display: none;
+  }
+}

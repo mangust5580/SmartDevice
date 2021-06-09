@@ -1,0 +1,27 @@
+.social__list {
+  display: flex;
+
+  @include md {
+    justify-content: center;
+  }
+}
+
+.social__item {
+  &:not(:first-child) {
+    margin-left: 16px;
+  }
+}
+
+.social__icon {
+  fill: $dusty-gray;
+  transition: fill 0.3s;
+
+  &:hover {
+    fill: $dodger-blue;
+    transition: fill 0.3s;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}

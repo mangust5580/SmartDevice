@@ -1,0 +1,140 @@
+.callback {
+  background-color: $dodger-blue;
+}
+
+.callback .container {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 35%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 35%;
+    width: 26.61%;
+    height: 288px;
+    background-image: url(../../img/desktop/form-img.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  @include lg {
+    padding-left: 16px;
+  }
+}
+
+.callback-form__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+
+  @include md {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @include sm {
+    max-width: 280px;
+  }
+}
+
+.callback-form__descr {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+}
+
+.callback-form__main {
+  margin-top: 45px;
+}
+
+.callback-form__block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  @include sm {
+    display: block;
+  }
+}
+
+.callback-form__field {
+  display: inline-block;
+  border: none;
+  padding: 12px 14px;
+  width: 49.5%;
+  font-family: $PTmono;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+  background-color: $transparent-white;
+
+  &::placeholder {
+    color: $white;
+  }
+
+  @include sm {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+.callback-form__question {
+  border: none;
+  padding: 12px 14px;
+  width: 100%;
+  min-height: 154px;
+  font-family: $PTmono;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+  background-color: $transparent-white;
+  resize: none;
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.callback-form__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 45px;
+
+  @include sm {
+    display: block;
+  }
+}
+
+.callback-form__btn {
+  border: 1px solid $white;
+  padding: 12px 18px;
+  color: $white;
+  background-color: $dodger-blue;
+  transition: background-color 0.3s;
+
+  &:hover {
+    color: $dodger-blue;
+    background-color: $white;
+    transition: background-color 0.3s;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  @include sm {
+    width: 100%;
+  }
+}

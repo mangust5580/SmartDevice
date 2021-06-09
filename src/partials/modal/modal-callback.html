@@ -1,0 +1,29 @@
+<section class="modal-callback modal">
+  <form action="#" class="modal-callback__form" method="POST">
+    <header class="modal-callback__header">
+      <h2 class="modal-callback__title">Закажите звонок</h2>
+      <p class="modal-callback__descr">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <button class="modal-callback__close btn-reset" aria-label="Закрыть модальное окно">
+        <svg class="modal-callback__close-icon" width="17" height="17">
+          <use xlink:href="img/sprite.svg#icon-close"/>
+        </svg>
+      </button>
+    </header>
+    <div class="modal-callback__main">
+      <input class="modal-callback__field callback-form__field" type="text" name="user-name" placeholder="Имя"
+             aria-label="Имя" required>
+      <input class="modal-callback__field callback-form__field" type="tel" name="tel-number" placeholder="Телефон"
+             aria-label="Номер телефона" required>
+      <textarea class="modal-callback__question callback-form__question" name="request" aria-label="Задать вопрос"
+                placeholder="Ваш вопрос" required></textarea>
+    </div>
+    <footer class="modal-callback__footer">
+      <button class="modal-callback__btn btn-reset btn callback-form__btn" type="submit">Задать вопрос</button>
+      <div class="modal-callback__privacy privacy">
+        <input class="privacy__checkbox" type="checkbox" name="privacy" value="privacy" id="modal-callback-privacy"
+               checked required>
+        <label for="modal-callback-privacy" tabindex="1">Я согласен на обработку персональных данных</label>
+      </div>
+    </footer>
+  </form>
+</section>

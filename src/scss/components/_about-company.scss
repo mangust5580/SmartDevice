@@ -1,0 +1,92 @@
+.about-company {
+  min-height: 400px;
+}
+
+.about-company .container {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 100px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 3%;
+    right: 0;
+    width: 165px;
+    height: 360px;
+    background-image: url(../img/desktop/year-of-foundation.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include sm {
+      display: none;
+    }
+  }
+}
+
+.about-company__article {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: calc(165px + 50px);
+
+  @include xl {
+    padding-left: calc(165px + 40px);
+  }
+
+  @include lg {
+    padding-left: calc(165px + 30px);
+  }
+
+  @include md {
+    padding-left: calc(165px + 20px);
+  }
+
+  @include sm {
+    padding-left: 0;
+  }
+}
+
+.about-company__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.about-company__text {
+  margin-top: 40px;
+
+  @include sm {
+    margin-top: 25px;
+  }
+}
+
+.about-company__descr {
+  font-family: $PTmono;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.about-company__link {
+  margin-top: 30px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    color: $white;
+    background-color: $dodger-blue;
+    transition: background-color 0.3s;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  @include lg {
+    padding: 15px 10%;
+  }
+
+  @include sm {
+    width: 100%;
+  }
+}

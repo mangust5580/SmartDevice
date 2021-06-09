@@ -1,0 +1,154 @@
+.page-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 70px 0;
+
+  &:first-child {
+    @include lg {
+      display: block;
+    }
+
+    @include sm {
+      padding-top: 50px;
+      padding-bottom: 0;
+    }
+  }
+
+  &:last-child {
+    border-top: 1px solid $transparent-corduroy;
+    padding: 20px 0;
+  }
+
+  @include sm {
+    display: block;
+  }
+}
+
+.page-footer__column {
+
+  &:not(:first-child) {
+    margin-left: 100px;
+  }
+
+  &:first-child {
+    width: 300px;
+
+    @include lg {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $transparent-corduroy;
+      padding-bottom: 20px;
+    }
+
+    @include md {
+      display: block;
+    }
+  }
+
+  &:last-child {
+    @include lg {
+      margin-left: 0;
+      margin-top: 40px;
+    }
+
+    @include sm {
+      margin-top: 0;
+    }
+  }
+}
+
+.page-footer .logo {
+  &__title {
+    color: $te-papa-green;
+  }
+
+  &__text {
+    @include sm {
+      display: inline-block;
+      padding-top: 0;
+    }
+  }
+
+  @include md {
+    justify-content: center;
+  }
+}
+
+.page-footer .social {
+  margin-top: 50px;
+
+  @include lg {
+    margin-top: 0;
+  }
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @include sm {
+    display: block;
+  }
+}
+
+.page-footer__copyright-text {
+  display: none;
+  &--lg {
+    @include lg {
+      display: inline-block;
+      min-width: 234px;
+      font-family: $PTmono;
+      font-size: 13px;
+      line-height: 24px;
+      letter-spacing: 0.04em;
+      text-align: center;
+      text-transform: uppercase;
+      color: $gable-green;
+      opacity: 0.5;
+    }
+
+    @include md {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.page-footer .accordion__toggle {
+  position: relative;
+  align-items: center;
+  padding: 25px 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $gable-green;
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 16px;
+    height: 2px;
+    background-color: $transparent-corduroy;
+  }
+
+  &::before {
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
+  &--current {
+    &::after {
+      display: none;
+    }
+  }
+}

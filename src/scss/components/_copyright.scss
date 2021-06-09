@@ -1,0 +1,40 @@
+.copyright__text {
+  display: inline-block;
+  font-family: $PTmono;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $gable-green;
+  opacity: 0.5;
+
+  @include lg {
+    &--lg {
+      display: none;
+    }
+  }
+}
+
+.copyright__link {
+  & .copyright__text {
+    transition: color 0.3s;
+
+    &:hover {
+      color: $dodger-blue;
+      transition: color 0.3s;
+    }
+  }
+
+  & .copyright__text {
+    &:active {
+      opacity: 0.2;
+    }
+  }
+
+  @include sm {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+}

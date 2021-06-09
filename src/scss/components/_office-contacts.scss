@@ -1,0 +1,25 @@
+.office-contacts__link {
+  font-size: 15px;
+  line-height: 25px;
+  color: $gable-green;
+  opacity: 0.5;
+
+  &:hover {
+    color: $dodger-blue;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+}
+
+.office-contacts {
+  min-width: 260px;
+}
+
+.office-contacts__text {
+  font-size: 15px;
+  line-height: 25px;
+  color: $gable-green;
+  opacity: 0.5;
+}

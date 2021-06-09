@@ -1,0 +1,81 @@
+.advantages .container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+
+  @include sm {
+    display: block;
+  }
+}
+
+.advantages__item {
+  border: 1px solid $gallery;
+  border-left: 5px solid $dodger-blue;
+  padding: 45px;
+  width: 48%;
+  background-color: $white;
+  transition: background-color 0.3s;
+
+  &:not(:nth-child(-n+2)) {
+    margin-top: 30px;
+  }
+
+  &:hover {
+    background-color: $dodger-blue;
+    transition: background-color 0.3s;
+
+    & .advantages__item-icon {
+      fill: $white;
+    }
+
+    & .advantages__item-title {
+      color: $white;
+    }
+
+    & .advantages__item-descr {
+      color: $white;
+
+    }
+  }
+
+  @include xl {
+    padding: 30px;
+  }
+
+  @include sm {
+    padding: 20px;
+    width: 100%;
+
+    &:nth-child(2) {
+      margin-top: 30px;
+    }
+  }
+}
+
+.advantages__item-icon {
+  fill: $dodger-blue;
+}
+
+.advantages__item-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: $dodger-blue;
+
+  @include sm {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.advantages-descr {
+  font-family: $PTmono;
+  font-size: 16px;
+  line-height: 22px;
+}

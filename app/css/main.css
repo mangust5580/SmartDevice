@@ -318,12 +318,6 @@ ul {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; }
-    @media (max-width: 768px) {
-      .hero::before {
-        background-image: url(../img/tablet/hero-bg-tb.png); } }
-    @media (max-width: 320px) {
-      .hero::before {
-        background-image: url(../img/mobile/hero-bg-tb.png); } }
 
 .hero .container {
   position: relative;
@@ -363,21 +357,21 @@ ul {
         height: 220px;
         background-image: url(../img/mobile/printed-circuit-boards-mb.png); } }
 
-@media (max-width: 1200px) {
-  .hero__text-wrapper {
-    margin-top: 80px; } }
-
-@media (max-width: 768px) {
-  .hero__text-wrapper {
-    margin-top: 340px; } }
-
-@media (max-width: 576px) {
-  .hero__text-wrapper {
-    margin-top: 370px; } }
-
-@media (max-width: 320px) {
-  .hero__text-wrapper {
-    margin-top: 360px; } }
+.hero__text-wrapper {
+  padding-bottom: 80px; }
+  @media (max-width: 1200px) {
+    .hero__text-wrapper {
+      margin-top: 80px; } }
+  @media (max-width: 768px) {
+    .hero__text-wrapper {
+      margin-top: 340px; } }
+  @media (max-width: 576px) {
+    .hero__text-wrapper {
+      margin-top: 370px; } }
+  @media (max-width: 320px) {
+    .hero__text-wrapper {
+      margin-top: 360px;
+      padding-bottom: 40px; } }
 
 .hero__title {
   margin: 10px 0;

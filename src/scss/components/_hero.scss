@@ -24,14 +24,6 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
-    @include md {
-      background-image: url(../img/tablet/hero-bg-tb.png);
-    }
-
-    @include mb {
-      background-image: url(../img/mobile/hero-bg-tb.png);
-    }
   }
 }
 
@@ -81,6 +73,7 @@
 }
 
 .hero__text-wrapper {
+  padding-bottom: 80px;
   @include xl {
     margin-top: 80px;
   }
@@ -95,6 +88,7 @@
 
   @include mb {
     margin-top: 360px;
+    padding-bottom: 40px;
   }
 }
 

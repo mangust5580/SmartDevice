@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html class="page main-page" lang="ru">
+@include('config/head.html', {
+  title: "Smart Device | Печатные платы" ,
+  description: "Печатные платы - Производство и монтаж, поставка комплектующих, блоков и модулей"
+})
+
+<body id="page" class="page__body">
+  @include('layout/header/main-header.html')
+  <main class="page-main">
+    @include('common/promo.html')
+    @include('common/advantages.html')
+    @include('common/about-company.html')
+    @include('common/services.html')
+    @include('common/feedback.html')
+  </main>
+  @include('layout/footer/main-footer.html')
+
+  <div class="modal">
+    @include('modals/modal-feedback.html')
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+.logo {
+  @include flex-center-v;
+
+  column-gap: 16px;
+
+  &--dark {
+    .logo__title {
+      color: var(--color-black);
+    }
+
+    .logo__tagline {
+      color: var(--color-gray);
+    }
+  }
+}
+
+.logo__desc {
+  @include flex-column;
+
+  color: var(--color-white);
+
+  @include sm {
+    display: none;
+  }
+}
+
+.logo__title {
+  @include font(25px, 29px);
+
+  font-family: var(--font-family-secondary);
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.logo__tagline {
+  @include font(12px, 14px);
+
+  font-family: var(--font-family-roboto);
+  font-weight: 500;
+  color: f-alpha(var(--color-white), 0.6);
+}

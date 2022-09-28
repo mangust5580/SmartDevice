@@ -1,0 +1,10 @@
+<div class="modal__dialog modal__dialog--feedback js-modal-common" data-modal-target="modal-feedback">
+  <button class="modal__btn-close btn btn--icon btn--icon-close" aria-label="Закрыть модальное окно"
+    data-modal-close></button>
+  <div class="modal__content">
+    <h2 class="modal__title">Закажи звонок</h2>
+    @include('forms/feedback-form.html', {
+      className: 'js-form-modal'
+    })
+  </div>
+</div>

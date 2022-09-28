@@ -1,0 +1,29 @@
+<form class="feedback-form @className" action="php/mail.php" method="POST" autocomplete="off">
+  <fieldset class="feedback-form__fieldset feedback-form__fieldset--hidden">
+    <legend class="feedback-form__fieldset-title">Скрытые поля</legend>
+    <input type="hidden" name="admin_email[]" value="mangust5580@gmail.com">
+    <input type="hidden" name="form_subject" value="Заявка с сайта SmartDevice">
+  </fieldset>
+  <fieldset class="feedback-form__fieldset">
+    <legend class="feedback-form__fieldset-title">Контакты</legend>
+    <label class="feedback-form__label">
+      <input class="feedback-form__field field js-input-name" type="text" name="name" placeholder="Имя"
+        aria-label="Введите Ваше имя" value="" />
+    </label>
+    <label class="feedback-form__label">
+      <input class="feedback-form__field field js-input-tel" type="tel" name="phone" placeholder="Телефон"
+        aria-label="Введите Ваш номер телефона" value="" />
+    </label>
+  </fieldset>
+  <label class="feedback-form__label">
+    <textarea class="feedback-form__textarea textarea js-input-question" name="question" placeholder="Ваш вопрос"
+      aria-label="Напишите Ваш вопрос" rows="10"></textarea>
+  </label>
+  <div class="feedback-form__footer">
+    <button class="feedback-form__btn btn btn--outline btn--outline-white" type="submit">Задать вопрос</button>
+    <label class="feedback-form__checkbox">
+      <span class="feedback-form__checkbox-text">Согласие на обработку персональных данных</span>
+      <input class="feedback-form__checkbox-input checkbox js-checkbox-agreement" type="checkbox" name="agreement" />
+    </label>
+  </div>
+</form>

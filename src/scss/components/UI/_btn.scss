@@ -1,0 +1,144 @@
+.btn {
+  @include btn-reset;
+  @include font(14px, 16px);
+
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-main);
+  font-family: var(--font-family-secondary);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  color: inherit;
+
+  &--icon {
+    @include transition-opacity;
+
+    border-radius: 0;
+
+    &-burger {
+      @include box(40px, 14px);
+      @include border-y(1px solid var(--color-white));
+
+      position: relative;
+
+      &:focus {
+        outline: var(--outline-primary);
+      }
+
+      &:hover {
+        opacity: var(--hover-opacity);
+      }
+
+      &:active {
+        opacity: var(--active-opacity);
+      }
+    }
+
+    &-close {
+      @include box(24px);
+
+      position: relative;
+
+      &::before,
+      &::after {
+        @include pseudo;
+        @include box(100%, 2px);
+
+        top: 50%;
+        background-color: var(--color-white);
+      }
+
+      &::before {
+        transform: translateY(-50%) rotate(-45deg);
+      }
+
+      &::after {
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      &:focus {
+        outline: var(--outline-white);
+      }
+
+      &:hover {
+        opacity: var(--hover-opacity);
+      }
+
+      &:active {
+        opacity: var(--active-opacity);
+      }
+    }
+  }
+
+  &--outline,
+  &--fill {
+    @include transition-colors;
+
+    padding: 14px;
+    min-width: 180px;
+  }
+
+  &--outline {
+    &-white {
+      border: 1px solid var(--color-white);
+      color: var(--color-white);
+
+      &:focus {
+        outline: var(--outline-primary);
+      }
+
+      &:hover {
+        border: 1px solid var(--color-primary);
+        color: var(--color-white);
+        background-color: var(--color-primary);
+      }
+
+      &:active {
+        opacity: var(--active-opacity);
+      }
+    }
+
+    &-primary {
+      border: 1px solid var(--color-primary);
+      color: var(--color-primary);
+      background-color: transparent;
+
+      &:focus {
+        outline: var(--outline-white);
+      }
+
+      &:hover {
+        border: 1px solid var(--color-primary);
+        color: var(--color-white);
+        background-color: var(--color-primary);
+      }
+
+      &:active {
+        opacity: var(--active-opacity);
+      }
+    }
+  }
+
+  &--fill {
+    &-primary {
+      border: 1px solid var(--color-primary);
+      color: var(--color-white);
+      background-color: var(--color-primary);
+
+      &:focus {
+        outline: var(--outline-white);
+      }
+
+      &:hover {
+        border-color: var(--color-white);
+        color: var(--color-primary);
+        background-color: var(--color-white);
+      }
+
+      &:active {
+        opacity: var(--active-opacity);
+      }
+    }
+  }
+}

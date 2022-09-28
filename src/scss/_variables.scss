@@ -1,0 +1,51 @@
+@import "./mixins/colors";
+
+$colors: (
+  white: #fff,
+  black: #000,
+  lightGray: #ebebeb,
+  doveGray: #cdcdcd,
+  gray: #666,
+  corduroy: #626962,
+  darkGreen: #1b2d37,
+  warning: #f89828,
+  info: #5a87fc,
+  success: #03cea4,
+  danger: #ff4242,
+  primary: #007db3,
+);
+
+:root {
+  // GRID-GAP
+  --grid-gap: 30px;
+
+  // PADDINGS
+  --container-padding-x: 13px;
+  --negative-container-padding-x: calc(var(--container-padding-x) * -1);
+
+  // FONT-FAMILY
+  --font-family-main: "PTMono", "Arial", sans-serif;
+  --font-family-secondary: "RobotoCondensed", "Tahoma", sans-serif;
+  --font-family-roboto: "Roboto", "Verdana", sans-serif;
+
+  // BORDER-RADIUS
+  --border-radius-sm: 5px;
+  --border-radius-circle: 50%;
+  --border-radius-main: var(--border-radius-sm);
+
+  // OUTLINE
+  --outline-primary: 2px solid var(--color-primary);
+  --outline-white: 2px solid var(--color-white);
+
+  // OPACITY
+  --hover-opacity: 0.7;
+  --active-opacity: 0.5;
+
+  // COLORS
+  --color-body-bg: var(--color-white);
+  --color-text-default: var(--color-gray);
+
+  @each $key, $value in $colors {
+    @include defineColorHSL(--color-#{$key}, $value);
+  }
+}

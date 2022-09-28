@@ -1,0 +1,18 @@
+.textarea {
+  position: relative;
+  display: inline-block;
+  overflow: auto;
+  border: none;
+  padding: 14px 16px;
+  width: 100%;
+  color: var(--color-white);
+  background-color: f-alpha(var(--color-white), 20%);
+  resize: none;
+
+  &::placeholder {
+    @include font(16px, 22px);
+
+    font-family: var(--font-family-main);
+    color: var(--color-white);
+  }
+}

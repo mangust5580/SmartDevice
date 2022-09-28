@@ -1,0 +1,24 @@
+.field {
+  position: relative;
+  display: inline-block;
+  border: none;
+  padding: 14px 16px;
+  width: 100%;
+  color: var(--color-white);
+  background-color: f-alpha(var(--color-white), 20%);
+
+  &::before {
+    @include pseudo;
+    @include absolute(left 0 right 0 top 0 bottom 0);
+
+    z-index: 33;
+    opacity: 0.2;
+  }
+
+  &::placeholder {
+    @include font(16px, 22px);
+
+    font-family: var(--font-family-main);
+    color: var(--color-white);
+  }
+}

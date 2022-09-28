@@ -1,0 +1,8 @@
+.nav-list {
+  @include list-reset;
+  @include padding-y(0, 40px);
+}
+
+.nav-list__link {
+  @include link-reset;
+}

@@ -1,0 +1,8 @@
+@mixin defineColorHSL($color, $hex) {
+  $color-hsl: math.floor(color.hue($hex)), math.floor(color.saturation($hex)), math.floor(color.lightness($hex));
+
+  #{$color}: string.unquote("hsl(#{$color-hsl})");
+  #{$color}-h: math.floor(color.hue($hex));
+  #{$color}-s: math.floor(color.saturation($hex));
+  #{$color}-l: math.floor(color.lightness($hex));
+}

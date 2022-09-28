@@ -1,0 +1,67 @@
+.contacts-callback {
+  @include flex-center-v;
+
+  column-gap: 40px;
+
+  @include xl {
+    column-gap: 30px;
+  }
+}
+
+.contacts-callback__list {
+  @include list-reset;
+  @include flex-center-v;
+
+  column-gap: 80px;
+
+  @include xl {
+    column-gap: 40px;
+  }
+
+  @include sm {
+    column-gap: 30px;
+  }
+}
+
+.contacts-callback__link {
+  @include link-reset;
+  @include flex-center-v;
+  @include transition-opacity;
+
+  column-gap: 20px;
+
+  &:focus {
+    outline: var(--outline-primary);
+  }
+
+  &:hover {
+    opacity: var(--hover-opacity);
+  }
+
+  &:active {
+    opacity: var(--active-opacity);
+  }
+}
+
+.contacts-callback__icon {
+  flex-shrink: 0;
+  fill: var(--color-primary);
+
+  @include md {
+    @include box(25px, 31px);
+  }
+}
+
+.contacts-callback__address {
+  @include address-reset;
+
+  @include md {
+    display: none;
+  }
+}
+
+.contacts-callback__btn {
+  @include lg {
+    display: none;
+  }
+}

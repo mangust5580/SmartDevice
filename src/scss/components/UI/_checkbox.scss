@@ -1,0 +1,26 @@
+.checkbox {
+  @include box(12px);
+
+  appearance: none;
+  position: absolute;
+  cursor: pointer;
+
+  &::before {
+    @include pseudo;
+    @include box(100%);
+  }
+
+  &::after {
+    @include pseudo;
+    @include box(100%);
+
+    border: 1px solid var(--color-white);
+  }
+
+  &:checked {
+    &::before {
+      background-image: url("../images/sprite.svg#icon-check");
+      filter: invert(100%);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<section id="feedback" class="feedback section-bg section-bg--primary">
+  <div class="feedback__container container">
+    <picture class="feedback__picture">
+      <source type="image/avif" srcset="images/paper_airplane.avif 1x, images/paper_airplane@2x.avif 2x" />
+      <source type="image/webp" srcset="images/paper_airplane.webp 1x, images/paper_airplane@2x.webp 2x" />
+      <img loading="lazy" src="images/paper_airplane.png" srcset="images/paper_airplane.png 2x"
+        alt="Декоративное изображение" width="511" height="288" aria-hidden="true" />
+    </picture>
+    <div class="feedback__inner">
+      <hgroup class="feedback__title-group">
+        <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
+        <h3 class="feedback__subtitle">Мы проконсультируем Вас бесплатно</h3>
+      </hgroup>
+      @include('forms/feedback-form.html', {
+      className: 'js-form'
+      })
+    </div>
+  </div>
+</section>

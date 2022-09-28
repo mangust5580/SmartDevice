@@ -1,0 +1,39 @@
+.social__list {
+  @include list-reset;
+  @include flex-center-v;
+
+  overflow: hidden;
+  gap: 15px;
+}
+
+.social__link {
+  @include link-reset;
+  @include box(32px);
+  @include transition-opacity;
+
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: var(--color-doveGray);
+
+  svg {
+    @include absolute(left 50% top 50%);
+
+    position: absolute;
+    fill: var(--color-white);
+    transform: translate(-50%, -50%);
+  }
+
+  &:focus {
+    outline: var(--outline-primary);
+    outline-offset: -2px;
+  }
+
+  &:hover {
+    opacity: var(--hover-opacity);
+  }
+
+  &:active {
+    opacity: var(--active-opacity);
+  }
+}

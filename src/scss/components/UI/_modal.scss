@@ -1,0 +1,107 @@
+.modal__title {
+  @include model-reset;
+  @include font(28px, 40px);
+
+  margin-bottom: 40px;
+  font-family: var(--font-family-secondary);
+}
+
+.modal {
+  --transition-time: 0.3s;
+
+  @include fixed(left 0 right 0 top 0 bottom 0);
+
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+  background-color: f-alpha(var(--color-black), 80%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-time), visibility var(--transition-time);
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+}
+
+.modal__dialog {
+  position: relative;
+  display: none;
+  vertical-align: middle;
+  margin: 50px auto;
+  border-radius: 20px;
+  padding: 40px;
+  width: 480px;
+  text-align: left;
+  background-color: var(--color-white);
+  cursor: default;
+
+  &--feedback {
+    .feedback-form__footer {
+      display: block;
+    }
+
+    .feedback-form__form-footer {
+      display: block;
+    }
+
+    .feedback-form__btn {
+      margin-bottom: 30px;
+      width: 100%;
+
+      &:hover {
+        color: var(--color-primary);
+        background-color: var(--color-white);
+      }
+    }
+
+    .feedback-form__checkbox-text {
+      margin-left: 12px;
+      max-width: 100%;
+    }
+
+    .feedback-form__fieldset {
+      @include lg {
+        display: block;
+        margin: 0;
+      }
+    }
+
+    .feedback-form__field {
+      @include lg {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  @include sm {
+    padding: 10px 20px;
+    width: 90%;
+  }
+}
+
+.modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--transition-time), visibility var(--transition-time);
+}
+
+.modal__dialog.modal-open {
+  display: inline-block;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.modal__btn-close {
+  @include absolute(right 16px top 16px);
+
+  &::before,
+  &::after {
+    background-color: var(--color-white);
+  }
+}

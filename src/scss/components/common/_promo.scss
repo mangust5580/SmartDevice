@@ -1,0 +1,154 @@
+.promo {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  height: 100vh;
+  min-height: 940px;
+  color: var(--color-white);
+  background-color: var(--color-darkGreen);
+
+  @include xl {
+    min-height: 860px;
+  }
+
+  @include md {
+    height: auto;
+    min-height: 940px;
+  }
+
+  @include sm {
+    padding-bottom: 80px;
+    min-height: auto;
+
+    @include mb {
+      padding-bottom: 60px;
+    }
+  }
+}
+
+.promo__bg {
+  @include absolute(left 0 right 0 top 0 bottom 0);
+
+  z-index: -1;
+
+  img {
+    @include box(100%);
+  }
+}
+
+.promo__container {
+  @include flex-between-center;
+
+  padding-top: 200px;
+
+  @include md {
+    @include flex-column-start;
+
+    padding-top: 120px;
+  }
+}
+
+.promo__content {
+  --indent-left: 72px;
+
+  position: relative;
+  min-height: 600px;
+  max-width: 720px;
+
+  .promo__title {
+    margin-bottom: 30px;
+  }
+
+  .promo__desc {
+    @include model-reset;
+    @include font(22px, 34px);
+
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: calc(var(--indent-left) + 28px);
+
+    &::before {
+      @include pseudo;
+      @include box(var(--indent-left), 2px);
+      @include absolute(left 0 top 16px);
+
+      background-color: currentcolor;
+    }
+
+    @include lg {
+      @include font(18px, 28px);
+    }
+
+    @include sm {
+      @include font(16px, 25px);
+    }
+  }
+
+  .promo__btn {
+    margin-left: calc(var(--indent-left) + 28px);
+
+    @include sm {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
+  @include lg {
+    --indent-left: 36px;
+
+    max-width: 460px;
+  }
+
+  @include md {
+    order: 2;
+    min-height: auto;
+  }
+
+  @include sm {
+    max-width: 100%;
+  }
+}
+
+.promo__btn-scroll {
+  @include absolute(left -40px bottom 100px);
+  @include transition-colors;
+
+  font-weight: 400;
+  text-transform: none;
+  color: f-alpha(var(--color-white), 50%);
+  transform: rotate(-90deg);
+
+  &:focus {
+    outline: var(--outline-primary);
+  }
+
+  &:hover {
+    color: var(--color-white);
+  }
+
+  &:active {
+    opacity: var(--active-opacity);
+  }
+
+  @include md {
+    display: none;
+  }
+}
+
+.promo__picture {
+  display: block;
+
+  @include xl {
+    @include absolute(top 50% right -180px);
+
+    z-index: -1;
+    transform: translateY(-50%);
+  }
+
+  @include md {
+    position: static;
+    order: 1;
+    margin: 0 auto 60px;
+    transform: none;
+  }
+}

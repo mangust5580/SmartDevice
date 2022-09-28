@@ -1,0 +1,40 @@
+.office-info {
+  width: 100%;
+}
+
+.office-info__title {
+  margin-bottom: 30px;
+
+  @include sm {
+    margin-bottom: 0;
+  }
+}
+
+.office-info__list {
+  @include list-reset;
+}
+
+.office-info__item {
+  margin-bottom: 12px;
+}
+
+.office-info__link {
+  @include link-reset;
+  @include font(15px, 25px);
+  @include transition-opacity;
+
+  color: var(--color-darkGreen);
+  opacity: 0.5;
+
+  &:focus {
+    outline: var(--outline-primary);
+  }
+
+  &:hover {
+    opacity: var(--hover-opacity);
+  }
+
+  &:active {
+    opacity: var(--active-opacity);
+  }
+}

@@ -1,0 +1,35 @@
+@mixin model-reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list-reset {
+  @include model-reset;
+
+  list-style: none;
+}
+
+@mixin btn-reset {
+  display: inline-block;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin link-reset {
+  border: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin fieldset-reset {
+  @include model-reset;
+
+  border: none;
+}
+
+@mixin address-reset {
+  font-style: inherit;
+}

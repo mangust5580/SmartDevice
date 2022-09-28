@@ -1,0 +1,49 @@
+.site-map {
+  width: 100%;
+}
+
+.site-map__title {
+  margin-bottom: 30px;
+
+  @include sm {
+    margin-bottom: 0;
+  }
+}
+
+.site-map__list {
+  @include list-reset;
+  @include flex-column(wrap);
+
+  max-height: 160px;
+  gap: 0 50px;
+
+  @include lg {
+    display: block;
+    max-height: 100%;
+  }
+}
+
+.site-map__item {
+  margin-bottom: 12px;
+}
+
+.site-map__link {
+  @include link-reset;
+  @include font(15px, 25px);
+  @include transition-opacity;
+
+  color: var(--color-darkGreen);
+  opacity: 0.5;
+
+  &:focus {
+    outline: var(--outline-primary);
+  }
+
+  &:hover {
+    opacity: var(--hover-opacity);
+  }
+
+  &:active {
+    opacity: var(--active-opacity);
+  }
+}

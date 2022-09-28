@@ -1,0 +1,31 @@
+.about-company__container {
+  @include flex-center-v;
+
+  gap: 60px;
+}
+
+.about-company__picture {
+  @include xl {
+    display: none;
+  }
+}
+
+.about-company__title {
+  @include model-reset;
+
+  margin-bottom: 18px;
+}
+
+.about-company__desc {
+  @include model-reset;
+
+  margin-bottom: 30px;
+}
+
+.about-company__link-more {
+  min-width: 180px;
+
+  &:focus {
+    outline: var(--outline-primary);
+  }
+}
